@@ -1,0 +1,176 @@
+﻿@{
+    List<ReportQA.Models.DTEKA.PoolRusak_Result> dtpoolrusak = ViewBag.dtPoolRusak;
+}
+
+@section Styles {
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Bootstrap/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Bootstrap/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet" href="~/Bootstrap/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+}
+
+@section Scripts {
+    <!-- DataTables  & Plugins -->
+    <script src="~/Bootstrap/plugins/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/Bootstrap/plugins/datatables-bs4/js/dataTables.Bootstrap4.min.js"></script>
+    <script src="~/Bootstrap/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="~/Bootstrap/plugins/datatables-responsive/js/responsive.Bootstrap4.min.js"></script>
+    <script src="~/Bootstrap/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="~/Bootstrap/plugins/datatables-buttons/js/buttons.Bootstrap4.min.js"></script>
+    <script src="~/Bootstrap/plugins/jszip/jszip.min.js"></script>
+    <script src="~/Bootstrap/plugins/pdfmake/pdfmake.min.js"></script>
+    <script src="~/Bootstrap/plugins/pdfmake/vfs_fonts.js"></script>
+    <script src="~/Bootstrap/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+    <script src="~/Bootstrap/plugins/datatables-buttons/js/buttons.print.min.js"></script>
+    <script src="~/Bootstrap/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+    <script>
+        $("#rptPoolRusak").DataTable({
+            "responsive": false,
+            "lengthChange": false,
+            "autoWidth": true,
+        }).buttons().container().appendTo('#rptPoolRusak_wrapper .col-md-6:eq(0)');
+    </script>
+
+    <script>
+        function selectAll(target)
+        {
+            var value = target.checked;
+            $('.selection').attr('checked', value);
+        }
+    </script>
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- left column -->
+                <div class="col-md-12">
+                    <!-- general form elements -->
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Validate Pool Rusak</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <form method="get" action="@(Url.Action("UpdatePoolRusak", "Home"))">
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Dari Tanggal</label>
+                                    <input type="date" class="form-control" id="tglFrom" name="tglFrom" value="@(ViewBag.dtfrom)" placeholder="Dari Tanggal">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Sampai Tanggal</label>
+                                    <input type="date" class="form-control" id="tglTo" name="tglTo" value="@(ViewBag.dtto)" placeholder="Sampai Tanggal">
+                                </div>
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                    <select name="status" id="status" class="form-control">
+                                        <option value="0">NON VALIDATED</option>
+                                        <option value="1">VALIDATED</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.card-body -->
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title">Data Pool Rusak</h3>
+                        </div>
+                        <!-- /.card-header -->
+                        <!-- form start -->
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                @if (dtpoolrusak != null && dtpoolrusak.Count() > 0)
+                                {
+                                <form action="@(Url.Action("UpdateData", "Home"))" method="post">
+                                    <table id="rptPoolRusak" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <input style="position:relative; margin-left: auto;" class="form-check-input" onchange="selectAll(this)" type="checkbox">
+                                                </th>
+                                                <th>VALIDATE</th>
+                                                <th>NO REKOMENDASI</th>
+                                                <th>TGL VALIDATE</th>
+                                                <th>KODE STORE</th>
+                                                <th>NAMA STORE</th>
+                                                <th>NO_ITEM</th>
+                                                <th>NAMA ITEM</th>
+                                                <th>NORUSAK</th>
+                                                <th>QTY</th>
+                                                <th>UNIT</th>
+                                                <th>KONVERSI</th>
+                                                <th>KETERANGAN</th>
+                                                <th>THN</th>
+                                                <th>TGLRUSAK</th>
+                                                <th>AUDDATE</th>
+                                                <th>POST</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (ReportQA.Models.DTEKA.PoolRusak_Result item in dtpoolrusak)
+                                            {
+                                            <tr>
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input selection" name="validates" type="checkbox" value="@(item.THN + "_" + item.HHB + "_" + item.NORUSAK + "_" + item.TGLRUSAK)">
+                                                    </div>
+                                                </td>
+                                                <td>@item.VALIDATE</td>
+                                                <td>@item.NO_REKOMENDASI</td>
+                                                <td>@item.VALIDATE_DATE</td>
+                                                <td>@item.HHB</td>
+                                                <td>@item.NAMA_STORE</td>
+                                                <td>@item.KD_ITEM</td>
+                                                <td>@item.NAMA_ITEM</td>
+                                                <td>@item.NORUSAK</td>
+                                                <td>@(item.QTY.HasValue ? item.QTY.Value : (decimal?)null)</td>
+                                                <td>@item.UNIT</td>
+                                                <td>@(item.KONVERSI.HasValue ? item.KONVERSI : (decimal?)null)</td>
+                                                <td>@item.KETERANGAN</td>
+                                                <td>@item.THN</td>
+                                                <td>@(item.DT_RUSAK.HasValue ? item.DT_RUSAK.Value.ToString("yyyy-MM-dd HH:mm:ss") : null)</td>
+                                                <td>@item.AUDDATE</td>
+                                                <td>@item.POST</td>
+                                            </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                    <button type="submit" class="btn btn-info">Update</button>
+                                </form>
+                                }
+                                else
+                                {
+                                    <h3>Data tidak ditemukan!</h3>
+                                }
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                </div>
+                <!--/.col (left) -->
+            </div>
+            <!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

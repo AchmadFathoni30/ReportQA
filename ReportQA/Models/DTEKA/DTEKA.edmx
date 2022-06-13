@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DTEKAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="GHHB">
+          <Key>
+            <PropertyRef Name="NOHHB" />
+          </Key>
+          <Property Name="NOHHB" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="ID" Type="char" MaxLength="3" />
+          <Property Name="NMHHB" Type="char" MaxLength="50" />
+          <Property Name="ALAMAT" Type="char" MaxLength="120" />
+          <Property Name="KOTA" Type="char" MaxLength="30" />
+          <Property Name="TELP" Type="char" MaxLength="20" />
+          <Property Name="FAX" Type="char" MaxLength="20" />
+          <Property Name="TGLDIRI" Type="numeric" Precision="9" Scale="0" />
+          <Property Name="KDAREA" Type="char" MaxLength="2" />
+          <Property Name="NOPRS" Type="char" MaxLength="2" />
+          <Property Name="JENIS" Type="char" MaxLength="1" />
+          <Property Name="LOKASI" Type="char" MaxLength="1" />
+          <Property Name="GUDANG" Type="char" MaxLength="6" />
+          <Property Name="REG" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="PANDING" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="AKTIF" Type="int" />
+          <Property Name="TAMPIL" Type="nvarchar" MaxLength="1" />
+          <Property Name="TARGET" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="NOCUST" Type="char" MaxLength="3" />
+          <Property Name="DEPTGL" Type="char" MaxLength="3" />
+          <Property Name="GRPSLS" Type="char" MaxLength="3" />
+          <Property Name="SRCODE" Type="char" MaxLength="4" />
+          <Property Name="IDPRG" Type="char" MaxLength="10" />
+          <Property Name="GLID" Type="char" MaxLength="6" />
+          <Property Name="IDAPP" Type="char" MaxLength="3" />
+          <Property Name="BERDIRI" Type="datetime" />
+          <Property Name="POS_BEGIN" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="POS_STATUS" Type="int" Nullable="false" />
+          <Property Name="EXTRACT_STATUS" Type="int" />
+          <Property Name="KET" Type="nchar" MaxLength="50" />
+          <Property Name="GDG_LM" Type="char" MaxLength="3" />
+          <Property Name="WILAYAH" Type="varchar" MaxLength="30" />
+          <Property Name="NUSER" Type="nvarchar" MaxLength="30" />
+          <Property Name="AUDDATE" Type="datetime" />
+          <Property Name="NEW_LOC" Type="char" MaxLength="6" />
+          <Property Name="GRPSLSNEW" Type="char" MaxLength="3" />
+          <Property Name="TYPE_FINGER" Type="nchar" MaxLength="1" />
+          <Property Name="IDKASIR" Type="char" MaxLength="2" />
+          <Property Name="DWDS" Type="varchar" MaxLength="50" />
+          <Property Name="CODECITY" Type="nchar" MaxLength="10" />
+          <Property Name="TGLTUTUP" Type="datetime" />
+          <Property Name="PROVINCE" Type="char" MaxLength="3" />
+          <Property Name="LATITUDES" Type="decimal" Precision="8" Scale="6" />
+          <Property Name="LONGITUDES" Type="decimal" Precision="9" Scale="6" />
+          <Property Name="TIPE_STORE" Type="char" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="ICITEM">
+          <Key>
+            <PropertyRef Name="ITEMNO" />
+          </Key>
+          <Property Name="ITEMNO" Type="char" MaxLength="24" Nullable="false" />
+          <Property Name="AUDTDATE" Type="decimal" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="AUDTTIME" Type="decimal" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="AUDTUSER" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="AUDTORG" Type="char" MaxLength="6" />
+          <Property Name="ALTSET" Type="int" />
+          <Property Name="DESC" Type="char" MaxLength="60" />
+          <Property Name="DATELASTMN" Type="decimal" Precision="9" Scale="0" />
+          <Property Name="INACTIVE" Type="smallint" />
+          <Property Name="ITEMBRKID" Type="char" MaxLength="6" />
+          <Property Name="FMTITEMNO" Type="char" MaxLength="24" />
+          <Property Name="CATEGORY" Type="char" MaxLength="6" />
+          <Property Name="CNTLACCT" Type="char" MaxLength="6" />
+          <Property Name="STOCKITEM" Type="smallint" />
+          <Property Name="STOCKUNIT" Type="char" MaxLength="10" />
+          <Property Name="DEFPRICLST" Type="char" MaxLength="6" />
+          <Property Name="UNITWGT" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="PICKINGSEQ" Type="char" MaxLength="10" />
+          <Property Name="SERIALNO" Type="smallint" />
+          <Property Name="COMMODIM" Type="char" MaxLength="16" />
+          <Property Name="DATEINACTV" Type="decimal" Precision="9" Scale="0" />
+          <Property Name="SEGMENT1" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT2" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT3" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT4" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT5" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT6" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT7" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT8" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT9" Type="char" MaxLength="24" />
+          <Property Name="SEGMENT10" Type="char" MaxLength="24" />
+          <Property Name="COMMENT1" Type="char" MaxLength="80" />
+          <Property Name="COMMENT2" Type="char" MaxLength="80" />
+          <Property Name="COMMENT3" Type="char" MaxLength="80" />
+          <Property Name="COMMENT4" Type="char" MaxLength="80" />
+          <Property Name="ALLOWONWEB" Type="smallint" />
+          <Property Name="KITTING" Type="smallint" />
+          <Property Name="VALUES" Type="int" />
+          <Property Name="DEFKITNO" Type="char" MaxLength="6" />
+          <Property Name="GUDANG" Type="char" MaxLength="3" />
+          <Property Name="ITEMSTORE" Type="char" MaxLength="60" />
+          <Property Name="JENIS" Type="char" MaxLength="2" />
+          <Property Name="SATACC" Type="char" MaxLength="10" />
+          <Property Name="CONVACC" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="SATLAPOR" Type="char" MaxLength="10" />
+          <Property Name="CONVLAP" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="SATPAKAI" Type="char" MaxLength="10" />
+          <Property Name="CONVPAKAI" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="SATORDER" Type="char" MaxLength="10" />
+          <Property Name="MAX" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="MIN" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="OPR" Type="char" MaxLength="3" />
+          <Property Name="ORDER" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="REPORTGRP" Type="char" MaxLength="3" />
+          <Property Name="TOLERANSI" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="STRGUDANG" Type="varchar" MaxLength="5" />
+          <Property Name="STRPAJAK" Type="varchar" MaxLength="10" />
+          <Property Name="STRORDER" Type="varchar" MaxLength="10" />
+          <Property Name="STRPAKAI" Type="varchar" MaxLength="10" />
+          <Property Name="STRLAPOR" Type="varchar" MaxLength="10" />
+          <Property Name="TYPEITEM" Type="nchar" MaxLength="1" />
+          <Property Name="DESC1" Type="char" MaxLength="60" />
+          <Property Name="ITEMAX" Type="char" MaxLength="24" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DTEKA.dbo.POLRUSAKD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="POLRUSAKD">
+          <Key>
+            <PropertyRef Name="RECEIPT" />
+          </Key>
+          <Property Name="HHB" Type="char" MaxLength="3" />
+          <Property Name="NORUSAK" Type="char" MaxLength="10" />
+          <Property Name="KD_ITEM" Type="char" MaxLength="24" />
+          <Property Name="QTY" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="UNIT" Type="char" MaxLength="10" />
+          <Property Name="KONVERSI" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="KETERANGAN" Type="varchar" MaxLength="50" />
+          <Property Name="RECEIPT" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'DTEKA.dbo.POLRUSAKH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="POLRUSAKH">
+          <Key>
+            <PropertyRef Name="AUDDATE" />
+            <PropertyRef Name="AUDUSER" />
+            <PropertyRef Name="AUDPOST" />
+            <PropertyRef Name="POST" />
+          </Key>
+          <Property Name="THN" Type="char" MaxLength="4" />
+          <Property Name="HHB" Type="char" MaxLength="3" />
+          <Property Name="NORUSAK" Type="char" MaxLength="10" />
+          <Property Name="TGLRUSAK" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="KETERANGAN" Type="varchar" MaxLength="50" />
+          <Property Name="AUDDATE" Type="numeric" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="AUDUSER" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="AUDPOST" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="POST" Type="int" Nullable="false" />
+          <Property Name="VALIDATE" Type="bit" />
+          <Property Name="VALIDATE_DATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="POLRUSAKP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NORUSAK" Type="char" MaxLength="10" />
+          <Property Name="VALIDATEE" Type="bit" />
+          <Property Name="VALIDATE_DATEE" Type="datetime" />
+        </EntityType>
+        <Function Name="PoolRusak" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tglFrom" Type="date" Mode="In" />
+          <Parameter Name="tglTo" Type="date" Mode="In" />
+          <Parameter Name="status" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="PoolRusakInsertValidate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="p_norusak" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="PoolRusakV" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="tglFrom" Type="date" Mode="In" />
+          <Parameter Name="tglTo" Type="date" Mode="In" />
+          <Parameter Name="status" Type="bit" Mode="In" />
+        </Function>
+        <EntityContainer Name="DTEKAModelStoreContainer">
+          <EntitySet Name="GHHB" EntityType="Self.GHHB" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ICITEM" EntityType="Self.ICITEM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="POLRUSAKP" EntityType="Self.POLRUSAKP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="POLRUSAKD" EntityType="Self.POLRUSAKD" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[POLRUSAKD].[HHB] AS [HHB], 
+[POLRUSAKD].[NORUSAK] AS [NORUSAK], 
+[POLRUSAKD].[KD_ITEM] AS [KD_ITEM], 
+[POLRUSAKD].[QTY] AS [QTY], 
+[POLRUSAKD].[UNIT] AS [UNIT], 
+[POLRUSAKD].[KONVERSI] AS [KONVERSI], 
+[POLRUSAKD].[KETERANGAN] AS [KETERANGAN], 
+[POLRUSAKD].[RECEIPT] AS [RECEIPT]
+FROM [dbo].[POLRUSAKD] AS [POLRUSAKD]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="POLRUSAKH" EntityType="Self.POLRUSAKH" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[POLRUSAKH].[THN] AS [THN], 
+[POLRUSAKH].[HHB] AS [HHB], 
+[POLRUSAKH].[NORUSAK] AS [NORUSAK], 
+[POLRUSAKH].[TGLRUSAK] AS [TGLRUSAK], 
+[POLRUSAKH].[KETERANGAN] AS [KETERANGAN], 
+[POLRUSAKH].[AUDDATE] AS [AUDDATE], 
+[POLRUSAKH].[AUDUSER] AS [AUDUSER], 
+[POLRUSAKH].[AUDPOST] AS [AUDPOST], 
+[POLRUSAKH].[POST] AS [POST], 
+[POLRUSAKH].[VALIDATE] AS [VALIDATE], 
+[POLRUSAKH].[VALIDATE_DATE] AS [VALIDATE_DATE]
+FROM [dbo].[POLRUSAKH] AS [POLRUSAKH]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DTEKAModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="GHHB">
+          <Key>
+            <PropertyRef Name="NOHHB" />
+          </Key>
+          <Property Name="NOHHB" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="NMHHB" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="ALAMAT" Type="String" MaxLength="120" FixedLength="true" Unicode="false" />
+          <Property Name="KOTA" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="TELP" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="FAX" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="TGLDIRI" Type="Decimal" Precision="9" Scale="0" />
+          <Property Name="KDAREA" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="NOPRS" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="JENIS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="LOKASI" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="GUDANG" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="REG" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="PANDING" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="AKTIF" Type="Int32" />
+          <Property Name="TAMPIL" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="TARGET" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="NOCUST" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="DEPTGL" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="GRPSLS" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="SRCODE" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="IDPRG" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="GLID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="IDAPP" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="BERDIRI" Type="DateTime" Precision="3" />
+          <Property Name="POS_BEGIN" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="POS_STATUS" Type="Int32" Nullable="false" />
+          <Property Name="EXTRACT_STATUS" Type="Int32" />
+          <Property Name="KET" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="GDG_LM" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="WILAYAH" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NUSER" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AUDDATE" Type="DateTime" Precision="3" />
+          <Property Name="NEW_LOC" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="GRPSLSNEW" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="TYPE_FINGER" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="IDKASIR" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="DWDS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CODECITY" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="TGLTUTUP" Type="DateTime" Precision="3" />
+          <Property Name="PROVINCE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="LATITUDES" Type="Decimal" Precision="8" Scale="6" />
+          <Property Name="LONGITUDES" Type="Decimal" Precision="9" Scale="6" />
+          <Property Name="TIPE_STORE" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ICITEM">
+          <Key>
+            <PropertyRef Name="ITEMNO" />
+          </Key>
+          <Property Name="ITEMNO" Type="String" MaxLength="24" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="AUDTDATE" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="AUDTTIME" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="AUDTUSER" Type="String" MaxLength="8" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="AUDTORG" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="ALTSET" Type="Int32" />
+          <Property Name="DESC" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="DATELASTMN" Type="Decimal" Precision="9" Scale="0" />
+          <Property Name="INACTIVE" Type="Int16" />
+          <Property Name="ITEMBRKID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="FMTITEMNO" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="CATEGORY" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="CNTLACCT" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="STOCKITEM" Type="Int16" />
+          <Property Name="STOCKUNIT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="DEFPRICLST" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="UNITWGT" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="PICKINGSEQ" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="SERIALNO" Type="Int16" />
+          <Property Name="COMMODIM" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="DATEINACTV" Type="Decimal" Precision="9" Scale="0" />
+          <Property Name="SEGMENT1" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT2" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT3" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT4" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT5" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT6" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT7" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT8" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT9" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="SEGMENT10" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="COMMENT1" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+          <Property Name="COMMENT2" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+          <Property Name="COMMENT3" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+          <Property Name="COMMENT4" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+          <Property Name="ALLOWONWEB" Type="Int16" />
+          <Property Name="KITTING" Type="Int16" />
+          <Property Name="VALUES" Type="Int32" />
+          <Property Name="DEFKITNO" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="GUDANG" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ITEMSTORE" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="JENIS" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="SATACC" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CONVACC" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SATLAPOR" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CONVLAP" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SATPAKAI" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CONVPAKAI" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SATORDER" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MAX" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="MIN" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="OPR" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ORDER" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="REPORTGRP" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="TOLERANSI" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="STRGUDANG" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="STRPAJAK" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="STRORDER" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="STRPAKAI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="STRLAPOR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="TYPEITEM" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="DESC1" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="ITEMAX" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="POLRUSAKP">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NORUSAK" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="VALIDATEE" Type="Boolean" />
+          <Property Name="VALIDATE_DATEE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="POLRUSAKD">
+          <Key>
+            <PropertyRef Name="RECEIPT" />
+          </Key>
+          <Property Name="HHB" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="NORUSAK" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="KD_ITEM" Type="String" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="QTY" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="UNIT" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="KONVERSI" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="KETERANGAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="RECEIPT" Type="Decimal" Precision="18" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="POLRUSAKH">
+          <Key>
+            <PropertyRef Name="AUDDATE" />
+            <PropertyRef Name="AUDUSER" />
+            <PropertyRef Name="AUDPOST" />
+            <PropertyRef Name="POST" />
+          </Key>
+          <Property Name="THN" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="HHB" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="NORUSAK" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TGLRUSAK" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="KETERANGAN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AUDDATE" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="AUDUSER" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="AUDPOST" Type="String" MaxLength="50" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="POST" Type="Int32" Nullable="false" />
+          <Property Name="VALIDATE" Type="Boolean" />
+          <Property Name="VALIDATE_DATE" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="DTEKAEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="GHHB" EntityType="Self.GHHB" />
+          <EntitySet Name="ICITEM" EntityType="Self.ICITEM" />
+          <EntitySet Name="POLRUSAKP" EntityType="Self.POLRUSAKP" />
+          <EntitySet Name="POLRUSAKD" EntityType="Self.POLRUSAKD" />
+          <EntitySet Name="POLRUSAKH" EntityType="Self.POLRUSAKH" />
+          <FunctionImport Name="PoolRusak" ReturnType="Collection(DTEKAModel.PoolRusak_Result)">
+            <Parameter Name="tglFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="tglTo" Mode="In" Type="DateTime" />
+            <Parameter Name="status" Mode="In" Type="Boolean" />
+          </FunctionImport>
+          <FunctionImport Name="PoolRusakInsertValidate">
+            <Parameter Name="p_norusak" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="PoolRusakV" ReturnType="Collection(DTEKAModel.PoolRusakV_Result)">
+            <Parameter Name="tglFrom" Mode="In" Type="DateTime" />
+            <Parameter Name="tglTo" Mode="In" Type="DateTime" />
+            <Parameter Name="status" Mode="In" Type="Boolean" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="PoolRusak_Result">
+          <Property Type="String" Name="HHB" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="NORUSAK" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="KD_ITEM" Nullable="true" MaxLength="24" />
+          <Property Type="Decimal" Name="QTY" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="UNIT" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="KONVERSI" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="KETERANGAN" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="RECEIPT" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="VALIDATE" Nullable="true" MaxLength="13" />
+          <Property Type="DateTime" Name="VALIDATE_DATE" Nullable="true" Precision="23" />
+          <Property Type="String" Name="THN" Nullable="true" MaxLength="4" />
+          <Property Type="Decimal" Name="TGLRUSAK" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="NO_REKOMENDASI" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="AUDDATE" Nullable="false" Precision="9" Scale="0" />
+          <Property Type="String" Name="AUDUSER" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="AUDPOST" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="POST" Nullable="false" />
+          <Property Type="String" Name="NAMA_STORE" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NAMA_ITEM" Nullable="true" MaxLength="60" />
+          <Property Type="DateTime" Name="DT_RUSAK" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="PoolRusakV_Result">
+          <Property Type="String" Name="HHB" Nullable="true" MaxLength="3" />
+          <Property Type="String" Name="NORUSAK" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="KD_ITEM" Nullable="true" MaxLength="24" />
+          <Property Type="Decimal" Name="QTY" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="UNIT" Nullable="true" MaxLength="10" />
+          <Property Type="Decimal" Name="KONVERSI" Nullable="true" Precision="18" Scale="2" />
+          <Property Type="String" Name="KETERANGAN" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="RECEIPT" Nullable="false" Precision="18" Scale="4" />
+          <Property Type="String" Name="VALIDATEE" Nullable="true" MaxLength="13" />
+          <Property Type="DateTime" Name="VALIDATE_DATEE" Nullable="true" Precision="23" />
+          <Property Type="String" Name="THN" Nullable="true" MaxLength="4" />
+          <Property Type="Decimal" Name="TGLRUSAK" Nullable="true" Precision="18" Scale="0" />
+          <Property Type="String" Name="NO_REKOMENDASI" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="AUDDATE" Nullable="false" Precision="9" Scale="0" />
+          <Property Type="String" Name="AUDUSER" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="AUDPOST" Nullable="false" MaxLength="50" />
+          <Property Type="Int32" Name="POST" Nullable="false" />
+          <Property Type="String" Name="NAMA_STORE" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NAMA_ITEM" Nullable="true" MaxLength="60" />
+          <Property Type="DateTime" Name="DT_RUSAK" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DTEKAModelStoreContainer" CdmEntityContainer="DTEKAEntities">
+          <EntitySetMapping Name="GHHB">
+            <EntityTypeMapping TypeName="DTEKAModel.GHHB">
+              <MappingFragment StoreEntitySet="GHHB">
+                <ScalarProperty Name="NOHHB" ColumnName="NOHHB" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NMHHB" ColumnName="NMHHB" />
+                <ScalarProperty Name="ALAMAT" ColumnName="ALAMAT" />
+                <ScalarProperty Name="KOTA" ColumnName="KOTA" />
+                <ScalarProperty Name="TELP" ColumnName="TELP" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="TGLDIRI" ColumnName="TGLDIRI" />
+                <ScalarProperty Name="KDAREA" ColumnName="KDAREA" />
+                <ScalarProperty Name="NOPRS" ColumnName="NOPRS" />
+                <ScalarProperty Name="JENIS" ColumnName="JENIS" />
+                <ScalarProperty Name="LOKASI" ColumnName="LOKASI" />
+                <ScalarProperty Name="GUDANG" ColumnName="GUDANG" />
+                <ScalarProperty Name="REG" ColumnName="REG" />
+                <ScalarProperty Name="PANDING" ColumnName="PANDING" />
+                <ScalarProperty Name="AKTIF" ColumnName="AKTIF" />
+                <ScalarProperty Name="TAMPIL" ColumnName="TAMPIL" />
+                <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+                <ScalarProperty Name="NOCUST" ColumnName="NOCUST" />
+                <ScalarProperty Name="DEPTGL" ColumnName="DEPTGL" />
+                <ScalarProperty Name="GRPSLS" ColumnName="GRPSLS" />
+                <ScalarProperty Name="SRCODE" ColumnName="SRCODE" />
+                <ScalarProperty Name="IDPRG" ColumnName="IDPRG" />
+                <ScalarProperty Name="GLID" ColumnName="GLID" />
+                <ScalarProperty Name="IDAPP" ColumnName="IDAPP" />
+                <ScalarProperty Name="BERDIRI" ColumnName="BERDIRI" />
+                <ScalarProperty Name="POS_BEGIN" ColumnName="POS_BEGIN" />
+                <ScalarProperty Name="POS_STATUS" ColumnName="POS_STATUS" />
+                <ScalarProperty Name="EXTRACT_STATUS" ColumnName="EXTRACT_STATUS" />
+                <ScalarProperty Name="KET" ColumnName="KET" />
+                <ScalarProperty Name="GDG_LM" ColumnName="GDG_LM" />
+                <ScalarProperty Name="WILAYAH" ColumnName="WILAYAH" />
+                <ScalarProperty Name="NUSER" ColumnName="NUSER" />
+                <ScalarProperty Name="AUDDATE" ColumnName="AUDDATE" />
+                <ScalarProperty Name="NEW_LOC" ColumnName="NEW_LOC" />
+                <ScalarProperty Name="GRPSLSNEW" ColumnName="GRPSLSNEW" />
+                <ScalarProperty Name="TYPE_FINGER" ColumnName="TYPE_FINGER" />
+                <ScalarProperty Name="IDKASIR" ColumnName="IDKASIR" />
+                <ScalarProperty Name="DWDS" ColumnName="DWDS" />
+                <ScalarProperty Name="CODECITY" ColumnName="CODECITY" />
+                <ScalarProperty Name="TGLTUTUP" ColumnName="TGLTUTUP" />
+                <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
+                <ScalarProperty Name="LATITUDES" ColumnName="LATITUDES" />
+                <ScalarProperty Name="LONGITUDES" ColumnName="LONGITUDES" />
+                <ScalarProperty Name="TIPE_STORE" ColumnName="TIPE_STORE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ICITEM">
+            <EntityTypeMapping TypeName="DTEKAModel.ICITEM">
+              <MappingFragment StoreEntitySet="ICITEM">
+                <ScalarProperty Name="ITEMNO" ColumnName="ITEMNO" />
+                <ScalarProperty Name="AUDTDATE" ColumnName="AUDTDATE" />
+                <ScalarProperty Name="AUDTTIME" ColumnName="AUDTTIME" />
+                <ScalarProperty Name="AUDTUSER" ColumnName="AUDTUSER" />
+                <ScalarProperty Name="AUDTORG" ColumnName="AUDTORG" />
+                <ScalarProperty Name="ALTSET" ColumnName="ALTSET" />
+                <ScalarProperty Name="DESC" ColumnName="DESC" />
+                <ScalarProperty Name="DATELASTMN" ColumnName="DATELASTMN" />
+                <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+                <ScalarProperty Name="ITEMBRKID" ColumnName="ITEMBRKID" />
+                <ScalarProperty Name="FMTITEMNO" ColumnName="FMTITEMNO" />
+                <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+                <ScalarProperty Name="CNTLACCT" ColumnName="CNTLACCT" />
+                <ScalarProperty Name="STOCKITEM" ColumnName="STOCKITEM" />
+                <ScalarProperty Name="STOCKUNIT" ColumnName="STOCKUNIT" />
+                <ScalarProperty Name="DEFPRICLST" ColumnName="DEFPRICLST" />
+                <ScalarProperty Name="UNITWGT" ColumnName="UNITWGT" />
+                <ScalarProperty Name="PICKINGSEQ" ColumnName="PICKINGSEQ" />
+                <ScalarProperty Name="SERIALNO" ColumnName="SERIALNO" />
+                <ScalarProperty Name="COMMODIM" ColumnName="COMMODIM" />
+                <ScalarProperty Name="DATEINACTV" ColumnName="DATEINACTV" />
+                <ScalarProperty Name="SEGMENT1" ColumnName="SEGMENT1" />
+                <ScalarProperty Name="SEGMENT2" ColumnName="SEGMENT2" />
+                <ScalarProperty Name="SEGMENT3" ColumnName="SEGMENT3" />
+                <ScalarProperty Name="SEGMENT4" ColumnName="SEGMENT4" />
+                <ScalarProperty Name="SEGMENT5" ColumnName="SEGMENT5" />
+                <ScalarProperty Name="SEGMENT6" ColumnName="SEGMENT6" />
+                <ScalarProperty Name="SEGMENT7" ColumnName="SEGMENT7" />
+                <ScalarProperty Name="SEGMENT8" ColumnName="SEGMENT8" />
+                <ScalarProperty Name="SEGMENT9" ColumnName="SEGMENT9" />
+                <ScalarProperty Name="SEGMENT10" ColumnName="SEGMENT10" />
+                <ScalarProperty Name="COMMENT1" ColumnName="COMMENT1" />
+                <ScalarProperty Name="COMMENT2" ColumnName="COMMENT2" />
+                <ScalarProperty Name="COMMENT3" ColumnName="COMMENT3" />
+                <ScalarProperty Name="COMMENT4" ColumnName="COMMENT4" />
+                <ScalarProperty Name="ALLOWONWEB" ColumnName="ALLOWONWEB" />
+                <ScalarProperty Name="KITTING" ColumnName="KITTING" />
+                <ScalarProperty Name="VALUES" ColumnName="VALUES" />
+                <ScalarProperty Name="DEFKITNO" ColumnName="DEFKITNO" />
+                <ScalarProperty Name="GUDANG" ColumnName="GUDANG" />
+                <ScalarProperty Name="ITEMSTORE" ColumnName="ITEMSTORE" />
+                <ScalarProperty Name="JENIS" ColumnName="JENIS" />
+                <ScalarProperty Name="SATACC" ColumnName="SATACC" />
+                <ScalarProperty Name="CONVACC" ColumnName="CONVACC" />
+                <ScalarProperty Name="SATLAPOR" ColumnName="SATLAPOR" />
+                <ScalarProperty Name="CONVLAP" ColumnName="CONVLAP" />
+                <ScalarProperty Name="SATPAKAI" ColumnName="SATPAKAI" />
+                <ScalarProperty Name="CONVPAKAI" ColumnName="CONVPAKAI" />
+                <ScalarProperty Name="SATORDER" ColumnName="SATORDER" />
+                <ScalarProperty Name="MAX" ColumnName="MAX" />
+                <ScalarProperty Name="MIN" ColumnName="MIN" />
+                <ScalarProperty Name="OPR" ColumnName="OPR" />
+                <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+                <ScalarProperty Name="REPORTGRP" ColumnName="REPORTGRP" />
+                <ScalarProperty Name="TOLERANSI" ColumnName="TOLERANSI" />
+                <ScalarProperty Name="STRGUDANG" ColumnName="STRGUDANG" />
+                <ScalarProperty Name="STRPAJAK" ColumnName="STRPAJAK" />
+                <ScalarProperty Name="STRORDER" ColumnName="STRORDER" />
+                <ScalarProperty Name="STRPAKAI" ColumnName="STRPAKAI" />
+                <ScalarProperty Name="STRLAPOR" ColumnName="STRLAPOR" />
+                <ScalarProperty Name="TYPEITEM" ColumnName="TYPEITEM" />
+                <ScalarProperty Name="DESC1" ColumnName="DESC1" />
+                <ScalarProperty Name="ITEMAX" ColumnName="ITEMAX" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="POLRUSAKP">
+            <EntityTypeMapping TypeName="DTEKAModel.POLRUSAKP">
+              <MappingFragment StoreEntitySet="POLRUSAKP">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NORUSAK" ColumnName="NORUSAK" />
+                <ScalarProperty Name="VALIDATEE" ColumnName="VALIDATEE" />
+                <ScalarProperty Name="VALIDATE_DATEE" ColumnName="VALIDATE_DATEE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="POLRUSAKD">
+            <EntityTypeMapping TypeName="DTEKAModel.POLRUSAKD">
+              <MappingFragment StoreEntitySet="POLRUSAKD">
+                <ScalarProperty Name="HHB" ColumnName="HHB" />
+                <ScalarProperty Name="NORUSAK" ColumnName="NORUSAK" />
+                <ScalarProperty Name="KD_ITEM" ColumnName="KD_ITEM" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="KONVERSI" ColumnName="KONVERSI" />
+                <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+                <ScalarProperty Name="RECEIPT" ColumnName="RECEIPT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="POLRUSAKH">
+            <EntityTypeMapping TypeName="DTEKAModel.POLRUSAKH">
+              <MappingFragment StoreEntitySet="POLRUSAKH">
+                <ScalarProperty Name="THN" ColumnName="THN" />
+                <ScalarProperty Name="HHB" ColumnName="HHB" />
+                <ScalarProperty Name="NORUSAK" ColumnName="NORUSAK" />
+                <ScalarProperty Name="TGLRUSAK" ColumnName="TGLRUSAK" />
+                <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+                <ScalarProperty Name="AUDDATE" ColumnName="AUDDATE" />
+                <ScalarProperty Name="AUDUSER" ColumnName="AUDUSER" />
+                <ScalarProperty Name="AUDPOST" ColumnName="AUDPOST" />
+                <ScalarProperty Name="POST" ColumnName="POST" />
+                <ScalarProperty Name="VALIDATE" ColumnName="VALIDATE" />
+                <ScalarProperty Name="VALIDATE_DATE" ColumnName="VALIDATE_DATE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="PoolRusak" FunctionName="DTEKAModel.Store.PoolRusak">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DTEKAModel.PoolRusak_Result">
+                <ScalarProperty Name="HHB" ColumnName="HHB" />
+                <ScalarProperty Name="NORUSAK" ColumnName="NORUSAK" />
+                <ScalarProperty Name="KD_ITEM" ColumnName="KD_ITEM" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="KONVERSI" ColumnName="KONVERSI" />
+                <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+                <ScalarProperty Name="RECEIPT" ColumnName="RECEIPT" />
+                <ScalarProperty Name="VALIDATE" ColumnName="VALIDATE" />
+                <ScalarProperty Name="VALIDATE_DATE" ColumnName="VALIDATE_DATE" />
+                <ScalarProperty Name="THN" ColumnName="THN" />
+                <ScalarProperty Name="TGLRUSAK" ColumnName="TGLRUSAK" />
+                <ScalarProperty Name="NO_REKOMENDASI" ColumnName="NO_REKOMENDASI" />
+                <ScalarProperty Name="AUDDATE" ColumnName="AUDDATE" />
+                <ScalarProperty Name="AUDUSER" ColumnName="AUDUSER" />
+                <ScalarProperty Name="AUDPOST" ColumnName="AUDPOST" />
+                <ScalarProperty Name="POST" ColumnName="POST" />
+                <ScalarProperty Name="NAMA_STORE" ColumnName="NAMA_STORE" />
+                <ScalarProperty Name="NAMA_ITEM" ColumnName="NAMA_ITEM" />
+                <ScalarProperty Name="DT_RUSAK" ColumnName="DT_RUSAK" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="PoolRusakInsertValidate" FunctionName="DTEKAModel.Store.PoolRusakInsertValidate" />
+          <FunctionImportMapping FunctionImportName="PoolRusakV" FunctionName="DTEKAModel.Store.PoolRusakV">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DTEKAModel.PoolRusakV_Result">
+                <ScalarProperty Name="HHB" ColumnName="HHB" />
+                <ScalarProperty Name="NORUSAK" ColumnName="NORUSAK" />
+                <ScalarProperty Name="KD_ITEM" ColumnName="KD_ITEM" />
+                <ScalarProperty Name="QTY" ColumnName="QTY" />
+                <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+                <ScalarProperty Name="KONVERSI" ColumnName="KONVERSI" />
+                <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+                <ScalarProperty Name="RECEIPT" ColumnName="RECEIPT" />
+                <ScalarProperty Name="VALIDATEE" ColumnName="VALIDATEE" />
+                <ScalarProperty Name="VALIDATE_DATEE" ColumnName="VALIDATE_DATEE" />
+                <ScalarProperty Name="THN" ColumnName="THN" />
+                <ScalarProperty Name="TGLRUSAK" ColumnName="TGLRUSAK" />
+                <ScalarProperty Name="NO_REKOMENDASI" ColumnName="NO_REKOMENDASI" />
+                <ScalarProperty Name="AUDDATE" ColumnName="AUDDATE" />
+                <ScalarProperty Name="AUDUSER" ColumnName="AUDUSER" />
+                <ScalarProperty Name="AUDPOST" ColumnName="AUDPOST" />
+                <ScalarProperty Name="POST" ColumnName="POST" />
+                <ScalarProperty Name="NAMA_STORE" ColumnName="NAMA_STORE" />
+                <ScalarProperty Name="NAMA_ITEM" ColumnName="NAMA_ITEM" />
+                <ScalarProperty Name="DT_RUSAK" ColumnName="DT_RUSAK" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

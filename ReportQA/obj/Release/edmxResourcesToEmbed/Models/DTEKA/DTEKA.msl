@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DTEKAModelStoreContainer" CdmEntityContainer="DTEKAEntities">
+    <EntitySetMapping Name="GHHB">
+      <EntityTypeMapping TypeName="DTEKAModel.GHHB">
+        <MappingFragment StoreEntitySet="GHHB">
+          <ScalarProperty Name="NOHHB" ColumnName="NOHHB" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NMHHB" ColumnName="NMHHB" />
+          <ScalarProperty Name="ALAMAT" ColumnName="ALAMAT" />
+          <ScalarProperty Name="KOTA" ColumnName="KOTA" />
+          <ScalarProperty Name="TELP" ColumnName="TELP" />
+          <ScalarProperty Name="FAX" ColumnName="FAX" />
+          <ScalarProperty Name="TGLDIRI" ColumnName="TGLDIRI" />
+          <ScalarProperty Name="KDAREA" ColumnName="KDAREA" />
+          <ScalarProperty Name="NOPRS" ColumnName="NOPRS" />
+          <ScalarProperty Name="JENIS" ColumnName="JENIS" />
+          <ScalarProperty Name="LOKASI" ColumnName="LOKASI" />
+          <ScalarProperty Name="GUDANG" ColumnName="GUDANG" />
+          <ScalarProperty Name="REG" ColumnName="REG" />
+          <ScalarProperty Name="PANDING" ColumnName="PANDING" />
+          <ScalarProperty Name="AKTIF" ColumnName="AKTIF" />
+          <ScalarProperty Name="TAMPIL" ColumnName="TAMPIL" />
+          <ScalarProperty Name="TARGET" ColumnName="TARGET" />
+          <ScalarProperty Name="NOCUST" ColumnName="NOCUST" />
+          <ScalarProperty Name="DEPTGL" ColumnName="DEPTGL" />
+          <ScalarProperty Name="GRPSLS" ColumnName="GRPSLS" />
+          <ScalarProperty Name="SRCODE" ColumnName="SRCODE" />
+          <ScalarProperty Name="IDPRG" ColumnName="IDPRG" />
+          <ScalarProperty Name="GLID" ColumnName="GLID" />
+          <ScalarProperty Name="IDAPP" ColumnName="IDAPP" />
+          <ScalarProperty Name="BERDIRI" ColumnName="BERDIRI" />
+          <ScalarProperty Name="POS_BEGIN" ColumnName="POS_BEGIN" />
+          <ScalarProperty Name="POS_STATUS" ColumnName="POS_STATUS" />
+          <ScalarProperty Name="EXTRACT_STATUS" ColumnName="EXTRACT_STATUS" />
+          <ScalarProperty Name="KET" ColumnName="KET" />
+          <ScalarProperty Name="GDG_LM" ColumnName="GDG_LM" />
+          <ScalarProperty Name="WILAYAH" ColumnName="WILAYAH" />
+          <ScalarProperty Name="NUSER" ColumnName="NUSER" />
+          <ScalarProperty Name="AUDDATE" ColumnName="AUDDATE" />
+          <ScalarProperty Name="NEW_LOC" ColumnName="NEW_LOC" />
+          <ScalarProperty Name="GRPSLSNEW" ColumnName="GRPSLSNEW" />
+          <ScalarProperty Name="TYPE_FINGER" ColumnName="TYPE_FINGER" />
+          <ScalarProperty Name="IDKASIR" ColumnName="IDKASIR" />
+          <ScalarProperty Name="DWDS" ColumnName="DWDS" />
+          <ScalarProperty Name="CODECITY" ColumnName="CODECITY" />
+          <ScalarProperty Name="TGLTUTUP" ColumnName="TGLTUTUP" />
+          <ScalarProperty Name="PROVINCE" ColumnName="PROVINCE" />
+          <ScalarProperty Name="LATITUDES" ColumnName="LATITUDES" />
+          <ScalarProperty Name="LONGITUDES" ColumnName="LONGITUDES" />
+          <ScalarProperty Name="TIPE_STORE" ColumnName="TIPE_STORE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ICITEM">
+      <EntityTypeMapping TypeName="DTEKAModel.ICITEM">
+        <MappingFragment StoreEntitySet="ICITEM">
+          <ScalarProperty Name="ITEMNO" ColumnName="ITEMNO" />
+          <ScalarProperty Name="AUDTDATE" ColumnName="AUDTDATE" />
+          <ScalarProperty Name="AUDTTIME" ColumnName="AUDTTIME" />
+          <ScalarProperty Name="AUDTUSER" ColumnName="AUDTUSER" />
+          <ScalarProperty Name="AUDTORG" ColumnName="AUDTORG" />
+          <ScalarProperty Name="ALTSET" ColumnName="ALTSET" />
+          <ScalarProperty Name="DESC" ColumnName="DESC" />
+          <ScalarProperty Name="DATELASTMN" ColumnName="DATELASTMN" />
+          <ScalarProperty Name="INACTIVE" ColumnName="INACTIVE" />
+          <ScalarProperty Name="ITEMBRKID" ColumnName="ITEMBRKID" />
+          <ScalarProperty Name="FMTITEMNO" ColumnName="FMTITEMNO" />
+          <ScalarProperty Name="CATEGORY" ColumnName="CATEGORY" />
+          <ScalarProperty Name="CNTLACCT" ColumnName="CNTLACCT" />
+          <ScalarProperty Name="STOCKITEM" ColumnName="STOCKITEM" />
+          <ScalarProperty Name="STOCKUNIT" ColumnName="STOCKUNIT" />
+          <ScalarProperty Name="DEFPRICLST" ColumnName="DEFPRICLST" />
+          <ScalarProperty Name="UNITWGT" ColumnName="UNITWGT" />
+          <ScalarProperty Name="PICKINGSEQ" ColumnName="PICKINGSEQ" />
+          <ScalarProperty Name="SERIALNO" ColumnName="SERIALNO" />
+          <ScalarProperty Name="COMMODIM" ColumnName="COMMODIM" />
+          <ScalarProperty Name="DATEINACTV" ColumnName="DATEINACTV" />
+          <ScalarProperty Name="SEGMENT1" ColumnName="SEGMENT1" />
+          <ScalarProperty Name="SEGMENT2" ColumnName="SEGMENT2" />
+          <ScalarProperty Name="SEGMENT3" ColumnName="SEGMENT3" />
+          <ScalarProperty Name="SEGMENT4" ColumnName="SEGMENT4" />
+          <ScalarProperty Name="SEGMENT5" ColumnName="SEGMENT5" />
+          <ScalarProperty Name="SEGMENT6" ColumnName="SEGMENT6" />
+          <ScalarProperty Name="SEGMENT7" ColumnName="SEGMENT7" />
+          <ScalarProperty Name="SEGMENT8" ColumnName="SEGMENT8" />
+          <ScalarProperty Name="SEGMENT9" ColumnName="SEGMENT9" />
+          <ScalarProperty Name="SEGMENT10" ColumnName="SEGMENT10" />
+          <ScalarProperty Name="COMMENT1" ColumnName="COMMENT1" />
+          <ScalarProperty Name="COMMENT2" ColumnName="COMMENT2" />
+          <ScalarProperty Name="COMMENT3" ColumnName="COMMENT3" />
+          <ScalarProperty Name="COMMENT4" ColumnName="COMMENT4" />
+          <ScalarProperty Name="ALLOWONWEB" ColumnName="ALLOWONWEB" />
+          <ScalarProperty Name="KITTING" ColumnName="KITTING" />
+          <ScalarProperty Name="VALUES" ColumnName="VALUES" />
+          <ScalarProperty Name="DEFKITNO" ColumnName="DEFKITNO" />
+          <ScalarProperty Name="GUDANG" ColumnName="GUDANG" />
+          <ScalarProperty Name="ITEMSTORE" ColumnName="ITEMSTORE" />
+          <ScalarProperty Name="JENIS" ColumnName="JENIS" />
+          <ScalarProperty Name="SATACC" ColumnName="SATACC" />
+          <ScalarProperty Name="CONVACC" ColumnName="CONVACC" />
+          <ScalarProperty Name="SATLAPOR" ColumnName="SATLAPOR" />
+          <ScalarProperty Name="CONVLAP" ColumnName="CONVLAP" />
+          <ScalarProperty Name="SATPAKAI" ColumnName="SATPAKAI" />
+          <ScalarProperty Name="CONVPAKAI" ColumnName="CONVPAKAI" />
+          <ScalarProperty Name="SATORDER" ColumnName="SATORDER" />
+          <ScalarProperty Name="MAX" ColumnName="MAX" />
+          <ScalarProperty Name="MIN" ColumnName="MIN" />
+          <ScalarProperty Name="OPR" ColumnName="OPR" />
+          <ScalarProperty Name="ORDER" ColumnName="ORDER" />
+          <ScalarProperty Name="REPORTGRP" ColumnName="REPORTGRP" />
+          <ScalarProperty Name="TOLERANSI" ColumnName="TOLERANSI" />
+          <ScalarProperty Name="STRGUDANG" ColumnName="STRGUDANG" />
+          <ScalarProperty Name="STRPAJAK" ColumnName="STRPAJAK" />
+          <ScalarProperty Name="STRORDER" ColumnName="STRORDER" />
+          <ScalarProperty Name="STRPAKAI" ColumnName="STRPAKAI" />
+          <ScalarProperty Name="STRLAPOR" ColumnName="STRLAPOR" />
+          <ScalarProperty Name="TYPEITEM" ColumnName="TYPEITEM" />
+          <ScalarProperty Name="DESC1" ColumnName="DESC1" />
+          <ScalarProperty Name="ITEMAX" ColumnName="ITEMAX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POLRUSAKD">
+      <EntityTypeMapping TypeName="DTEKAModel.POLRUSAKD">
+        <MappingFragment StoreEntitySet="POLRUSAKD">
+          <ScalarProperty Name="HHB" ColumnName="HHB" />
+          <ScalarProperty Name="NORUSAK" ColumnName="NORUSAK" />
+          <ScalarProperty Name="KD_ITEM" ColumnName="KD_ITEM" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="KONVERSI" ColumnName="KONVERSI" />
+          <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+          <ScalarProperty Name="RECEIPT" ColumnName="RECEIPT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POLRUSAKH">
+      <EntityTypeMapping TypeName="DTEKAModel.POLRUSAKH">
+        <MappingFragment StoreEntitySet="POLRUSAKH">
+          <ScalarProperty Name="THN" ColumnName="THN" />
+          <ScalarProperty Name="HHB" ColumnName="HHB" />
+          <ScalarProperty Name="NORUSAK" ColumnName="NORUSAK" />
+          <ScalarProperty Name="TGLRUSAK" ColumnName="TGLRUSAK" />
+          <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+          <ScalarProperty Name="AUDDATE" ColumnName="AUDDATE" />
+          <ScalarProperty Name="AUDUSER" ColumnName="AUDUSER" />
+          <ScalarProperty Name="AUDPOST" ColumnName="AUDPOST" />
+          <ScalarProperty Name="POST" ColumnName="POST" />
+          <ScalarProperty Name="VALIDATE" ColumnName="VALIDATE" />
+          <ScalarProperty Name="VALIDATE_DATE" ColumnName="VALIDATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="PoolRusak" FunctionName="DTEKAModel.Store.PoolRusak">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DTEKAModel.PoolRusak_Result">
+          <ScalarProperty Name="HHB" ColumnName="HHB" />
+          <ScalarProperty Name="NORUSAK" ColumnName="NORUSAK" />
+          <ScalarProperty Name="KD_ITEM" ColumnName="KD_ITEM" />
+          <ScalarProperty Name="QTY" ColumnName="QTY" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="KONVERSI" ColumnName="KONVERSI" />
+          <ScalarProperty Name="KETERANGAN" ColumnName="KETERANGAN" />
+          <ScalarProperty Name="RECEIPT" ColumnName="RECEIPT" />
+          <ScalarProperty Name="VALIDATE" ColumnName="VALIDATE" />
+          <ScalarProperty Name="VALIDATE_DATE" ColumnName="VALIDATE_DATE" />
+          <ScalarProperty Name="THN" ColumnName="THN" />
+          <ScalarProperty Name="TGLRUSAK" ColumnName="TGLRUSAK" />
+          <ScalarProperty Name="NO_REKOMENDASI" ColumnName="NO_REKOMENDASI" />
+          <ScalarProperty Name="AUDDATE" ColumnName="AUDDATE" />
+          <ScalarProperty Name="AUDUSER" ColumnName="AUDUSER" />
+          <ScalarProperty Name="AUDPOST" ColumnName="AUDPOST" />
+          <ScalarProperty Name="POST" ColumnName="POST" />
+          <ScalarProperty Name="NAMA_STORE" ColumnName="NAMA_STORE" />
+          <ScalarProperty Name="NAMA_ITEM" ColumnName="NAMA_ITEM" />
+          <ScalarProperty Name="DT_RUSAK" ColumnName="DT_RUSAK" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ValidatePoolRusak" FunctionName="DTEKAModel.Store.ValidatePoolRusak" />
+  </EntityContainerMapping>
+</Mapping>

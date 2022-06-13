@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DTEKAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="GHHB">
+    <Key>
+      <PropertyRef Name="NOHHB" />
+    </Key>
+    <Property Name="NOHHB" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ID" Type="char" MaxLength="3" />
+    <Property Name="NMHHB" Type="char" MaxLength="50" />
+    <Property Name="ALAMAT" Type="char" MaxLength="120" />
+    <Property Name="KOTA" Type="char" MaxLength="30" />
+    <Property Name="TELP" Type="char" MaxLength="20" />
+    <Property Name="FAX" Type="char" MaxLength="20" />
+    <Property Name="TGLDIRI" Type="numeric" Precision="9" Scale="0" />
+    <Property Name="KDAREA" Type="char" MaxLength="2" />
+    <Property Name="NOPRS" Type="char" MaxLength="2" />
+    <Property Name="JENIS" Type="char" MaxLength="1" />
+    <Property Name="LOKASI" Type="char" MaxLength="1" />
+    <Property Name="GUDANG" Type="char" MaxLength="6" />
+    <Property Name="REG" Type="numeric" Precision="5" Scale="0" />
+    <Property Name="PANDING" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="AKTIF" Type="int" />
+    <Property Name="TAMPIL" Type="nvarchar" MaxLength="1" />
+    <Property Name="TARGET" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NOCUST" Type="char" MaxLength="3" />
+    <Property Name="DEPTGL" Type="char" MaxLength="3" />
+    <Property Name="GRPSLS" Type="char" MaxLength="3" />
+    <Property Name="SRCODE" Type="char" MaxLength="4" />
+    <Property Name="IDPRG" Type="char" MaxLength="10" />
+    <Property Name="GLID" Type="char" MaxLength="6" />
+    <Property Name="IDAPP" Type="char" MaxLength="3" />
+    <Property Name="BERDIRI" Type="datetime" />
+    <Property Name="POS_BEGIN" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="POS_STATUS" Type="int" Nullable="false" />
+    <Property Name="EXTRACT_STATUS" Type="int" />
+    <Property Name="KET" Type="nchar" MaxLength="50" />
+    <Property Name="GDG_LM" Type="char" MaxLength="3" />
+    <Property Name="WILAYAH" Type="varchar" MaxLength="30" />
+    <Property Name="NUSER" Type="nvarchar" MaxLength="30" />
+    <Property Name="AUDDATE" Type="datetime" />
+    <Property Name="NEW_LOC" Type="char" MaxLength="6" />
+    <Property Name="GRPSLSNEW" Type="char" MaxLength="3" />
+    <Property Name="TYPE_FINGER" Type="nchar" MaxLength="1" />
+    <Property Name="IDKASIR" Type="char" MaxLength="2" />
+    <Property Name="DWDS" Type="varchar" MaxLength="50" />
+    <Property Name="CODECITY" Type="nchar" MaxLength="10" />
+    <Property Name="TGLTUTUP" Type="datetime" />
+    <Property Name="PROVINCE" Type="char" MaxLength="3" />
+    <Property Name="LATITUDES" Type="decimal" Precision="8" Scale="6" />
+    <Property Name="LONGITUDES" Type="decimal" Precision="9" Scale="6" />
+    <Property Name="TIPE_STORE" Type="char" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="ICITEM">
+    <Key>
+      <PropertyRef Name="ITEMNO" />
+    </Key>
+    <Property Name="ITEMNO" Type="char" MaxLength="24" Nullable="false" />
+    <Property Name="AUDTDATE" Type="decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="AUDTTIME" Type="decimal" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="AUDTUSER" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="AUDTORG" Type="char" MaxLength="6" />
+    <Property Name="ALTSET" Type="int" />
+    <Property Name="DESC" Type="char" MaxLength="60" />
+    <Property Name="DATELASTMN" Type="decimal" Precision="9" Scale="0" />
+    <Property Name="INACTIVE" Type="smallint" />
+    <Property Name="ITEMBRKID" Type="char" MaxLength="6" />
+    <Property Name="FMTITEMNO" Type="char" MaxLength="24" />
+    <Property Name="CATEGORY" Type="char" MaxLength="6" />
+    <Property Name="CNTLACCT" Type="char" MaxLength="6" />
+    <Property Name="STOCKITEM" Type="smallint" />
+    <Property Name="STOCKUNIT" Type="char" MaxLength="10" />
+    <Property Name="DEFPRICLST" Type="char" MaxLength="6" />
+    <Property Name="UNITWGT" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="PICKINGSEQ" Type="char" MaxLength="10" />
+    <Property Name="SERIALNO" Type="smallint" />
+    <Property Name="COMMODIM" Type="char" MaxLength="16" />
+    <Property Name="DATEINACTV" Type="decimal" Precision="9" Scale="0" />
+    <Property Name="SEGMENT1" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT2" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT3" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT4" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT5" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT6" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT7" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT8" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT9" Type="char" MaxLength="24" />
+    <Property Name="SEGMENT10" Type="char" MaxLength="24" />
+    <Property Name="COMMENT1" Type="char" MaxLength="80" />
+    <Property Name="COMMENT2" Type="char" MaxLength="80" />
+    <Property Name="COMMENT3" Type="char" MaxLength="80" />
+    <Property Name="COMMENT4" Type="char" MaxLength="80" />
+    <Property Name="ALLOWONWEB" Type="smallint" />
+    <Property Name="KITTING" Type="smallint" />
+    <Property Name="VALUES" Type="int" />
+    <Property Name="DEFKITNO" Type="char" MaxLength="6" />
+    <Property Name="GUDANG" Type="char" MaxLength="3" />
+    <Property Name="ITEMSTORE" Type="char" MaxLength="60" />
+    <Property Name="JENIS" Type="char" MaxLength="2" />
+    <Property Name="SATACC" Type="char" MaxLength="10" />
+    <Property Name="CONVACC" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SATLAPOR" Type="char" MaxLength="10" />
+    <Property Name="CONVLAP" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SATPAKAI" Type="char" MaxLength="10" />
+    <Property Name="CONVPAKAI" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="SATORDER" Type="char" MaxLength="10" />
+    <Property Name="MAX" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="MIN" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="OPR" Type="char" MaxLength="3" />
+    <Property Name="ORDER" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="REPORTGRP" Type="char" MaxLength="3" />
+    <Property Name="TOLERANSI" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="STRGUDANG" Type="varchar" MaxLength="5" />
+    <Property Name="STRPAJAK" Type="varchar" MaxLength="10" />
+    <Property Name="STRORDER" Type="varchar" MaxLength="10" />
+    <Property Name="STRPAKAI" Type="varchar" MaxLength="10" />
+    <Property Name="STRLAPOR" Type="varchar" MaxLength="10" />
+    <Property Name="TYPEITEM" Type="nchar" MaxLength="1" />
+    <Property Name="DESC1" Type="char" MaxLength="60" />
+    <Property Name="ITEMAX" Type="char" MaxLength="24" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DTEKA.dbo.POLRUSAKD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="POLRUSAKD">
+    <Key>
+      <PropertyRef Name="RECEIPT" />
+    </Key>
+    <Property Name="HHB" Type="char" MaxLength="3" />
+    <Property Name="NORUSAK" Type="char" MaxLength="10" />
+    <Property Name="KD_ITEM" Type="char" MaxLength="24" />
+    <Property Name="QTY" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="UNIT" Type="char" MaxLength="10" />
+    <Property Name="KONVERSI" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="KETERANGAN" Type="varchar" MaxLength="50" />
+    <Property Name="RECEIPT" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DTEKA.dbo.POLRUSAKH' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="POLRUSAKH">
+    <Key>
+      <PropertyRef Name="AUDDATE" />
+      <PropertyRef Name="AUDUSER" />
+      <PropertyRef Name="AUDPOST" />
+      <PropertyRef Name="POST" />
+    </Key>
+    <Property Name="THN" Type="char" MaxLength="4" />
+    <Property Name="HHB" Type="char" MaxLength="3" />
+    <Property Name="NORUSAK" Type="char" MaxLength="10" />
+    <Property Name="TGLRUSAK" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="KETERANGAN" Type="varchar" MaxLength="50" />
+    <Property Name="AUDDATE" Type="numeric" Precision="9" Scale="0" Nullable="false" />
+    <Property Name="AUDUSER" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="AUDPOST" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="POST" Type="int" Nullable="false" />
+    <Property Name="VALIDATE" Type="bit" />
+    <Property Name="VALIDATE_DATE" Type="datetime" />
+  </EntityType>
+  <Function Name="PoolRusak" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="tglFrom" Type="date" Mode="In" />
+    <Parameter Name="tglTo" Type="date" Mode="In" />
+    <Parameter Name="status" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="ValidatePoolRusak" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="p_thn" Type="varchar" Mode="In" />
+    <Parameter Name="p_hhb" Type="varchar" Mode="In" />
+    <Parameter Name="p_norusak" Type="varchar" Mode="In" />
+    <Parameter Name="p_tglrusak" Type="decimal" Mode="In" />
+  </Function>
+  <EntityContainer Name="DTEKAModelStoreContainer">
+    <EntitySet Name="GHHB" EntityType="Self.GHHB" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ICITEM" EntityType="Self.ICITEM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POLRUSAKD" EntityType="Self.POLRUSAKD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[POLRUSAKD].[HHB] AS [HHB], 
+[POLRUSAKD].[NORUSAK] AS [NORUSAK], 
+[POLRUSAKD].[KD_ITEM] AS [KD_ITEM], 
+[POLRUSAKD].[QTY] AS [QTY], 
+[POLRUSAKD].[UNIT] AS [UNIT], 
+[POLRUSAKD].[KONVERSI] AS [KONVERSI], 
+[POLRUSAKD].[KETERANGAN] AS [KETERANGAN], 
+[POLRUSAKD].[RECEIPT] AS [RECEIPT]
+FROM [dbo].[POLRUSAKD] AS [POLRUSAKD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="POLRUSAKH" EntityType="Self.POLRUSAKH" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[POLRUSAKH].[THN] AS [THN], 
+[POLRUSAKH].[HHB] AS [HHB], 
+[POLRUSAKH].[NORUSAK] AS [NORUSAK], 
+[POLRUSAKH].[TGLRUSAK] AS [TGLRUSAK], 
+[POLRUSAKH].[KETERANGAN] AS [KETERANGAN], 
+[POLRUSAKH].[AUDDATE] AS [AUDDATE], 
+[POLRUSAKH].[AUDUSER] AS [AUDUSER], 
+[POLRUSAKH].[AUDPOST] AS [AUDPOST], 
+[POLRUSAKH].[POST] AS [POST], 
+[POLRUSAKH].[VALIDATE] AS [VALIDATE], 
+[POLRUSAKH].[VALIDATE_DATE] AS [VALIDATE_DATE]
+FROM [dbo].[POLRUSAKH] AS [POLRUSAKH]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
